@@ -1,0 +1,27 @@
+<%= form_with(model: country_language) do |form| %>
+  <% if country_language.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(country_language.errors.count, "error") %> prohibited this country_language from being saved:</h2>
+
+      <ul>
+        <% country_language.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :country_id %>
+    <%= form.number_field :country_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :language_id %>
+    <%= form.number_field :language_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
