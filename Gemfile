@@ -2,9 +2,12 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
-
-
-gem 'devise'
+gem 'net-smtp'
+gem "dotenv-rails"
+gem "devise"
+gem "omniauth"
+gem "omniauth-google-oauth2"
+gem "omniauth-rails_csrf_protection"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7'
 # Use sqlite3 as the database for Active Record
