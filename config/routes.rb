@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'countries#index'
   devise_for :users
   resources :country_languages
   resources :languages
