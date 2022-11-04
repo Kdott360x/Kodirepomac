@@ -3,7 +3,7 @@ class CountryLanguagesController < ApplicationController
 
   # GET /country_languages or /country_languages.json
   def index
-    @country_languages = CountryLanguage.all
+    @country_languages = CountryLanguage.joins(:country, :language).select(:country_id, :language_id, :id).all
   end
 
   # GET /country_languages/1 or /country_languages/1.json

@@ -14,8 +14,8 @@
   <tbody>
     <% @country_languages.each do |country_language| %>
       <tr>
-        <td><%= Country.find(country_language.country_id).name %></td>
-        <td><%= Language.find(country_language.language_id).name %></td>
+        <td><%= country_language.country.name %></td>
+        <td><%= country_language.language.name %></td>
         <td><%= link_to 'Show', country_language %></td>
         <td><%= link_to 'Edit', edit_country_language_path(country_language) %></td>
         <td><%= link_to 'Destroy', country_language, method: :delete, data: { confirm: 'Are you sure?' } %></td>
